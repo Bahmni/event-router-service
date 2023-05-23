@@ -1,0 +1,3 @@
+# Ignoring snakeyaml dependency 1.33 which is critical vulnerability because liquibase-core is using that.
+# Even latest version of liquibase-core that is 4.21 as of now is also using this.
+CVE-2022-1471
