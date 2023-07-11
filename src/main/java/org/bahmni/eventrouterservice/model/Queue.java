@@ -7,10 +7,8 @@ import lombok.NoArgsConstructor;
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @NoArgsConstructor
 @AllArgsConstructor
-public class Topic {
+public class Queue {
     private String name;
-    private String subscriptionId;
 
     public String getName() { return name; }
-    public String getSubscriptionId() { return subscriptionId; }
 }

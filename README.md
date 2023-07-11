@@ -1,71 +1,34 @@
-# event-router-service
+## event-router-service
 
-Event router service routes the events from Bhamni to external system and vice versa. 
-As of now it supports routing the message from Bahmni to GCP Pub sub and GCP pub sub to Bahmni.
+Event router service routes the events from Bhamni to external system and vice versa.
+As of now it supports routing the message from Bahmni to GCP Pub sub.
 Configuration has to be provided both as an environment variable and through configuration files.
+Note: We expect the message to be received and published in JSON format.
 
-Subscription from bahmni
+## Packaging
+```mvn clean package```
 
-Run test using below command:
-mvn clean install
+## Prerequisite
+    JDK 1.17
 
-Run Application using below command:
-mvn spring-boot:run -Dspring-boot.run.jvmArguments="-DGCP_PUB_SUB_ENABLED=true -DGCP_PROJECT_ID=<PROJECT_ID> -DGCP_CREDENTIALS_FILE_LOCATION=<GCP_PUB_SUB_AUTHENTICATION_FILE>.json -DPUBLISHER_CONFIGURATION_FILE_LOCATION=<PUBLISHER_CONFIGURATION_DESCRIPTION_FILE>.json -DSUBSCRIBER_CONFIGURATION_FILE_LOCATION=<SUBSCRIBER_CONFIGURATION_FILE_LOCATION>.json -DSUBSCRIBER_SCHEDULE_CONFIGURATION_FILE_LOCATION=<SUBSCRIBER_SCHEDULE_CONFIGURATION_FILE_LOCATION>.json -DEVENT_ROUTER_DB_HOST=http://localhost  -DEVENT_ROUTER_DB_PORT=3306 -DEVENT_ROUTER_DB_USERNAME=event_router_user -DEVENT_ROUTER_DB_PASSWORD=passw0rd -DEVENT_ROUTER_DB_NAME=event_router -DOPENMRS_HOST=localhost -DOPENMRS_PORT=8080 -DOPENMRS_ATOMFEED_USER=admin -DOPENMRS_ATOMFEED_PASSWORD=Admin123 -DMAX_FAILED_EVENTS=1 -DCONNECTION_TIMEOUT_IN_MILLISECONDS=5000 -DREPLY_TIMEOUT_IN_MILLISECONDS=5000 -DLOGGING_LEVEL=INFO"
+## Run Application using below command:
 
-sample publisher-description-configuration:
+mvn spring-boot:run -Dspring-boot.run.jvmArguments="-DGCP_PUB_SUB_ENABLED=true -DGCP_PROJECT_ID=<GCP_PROJECT_ID> -DGCP_CREDENTIALS_FILE_LOCATION=<GCP_PUB_SUB_AUTHENTICATION_FILE>.json -DBAHMNI_ACTIVEMQ_BROKER_URL=<BAHMNI_ACTIVEMQ_BROKER_URL> -DBAHMNI_ACTIVEMQ_TO_GCP_ROUTE_ENABLED=true -DBAHMNI_ACTIVEMQ_TO_GCP_FAILED_ROUTE_ENABLED=false -DROUTE_DESCRIPTION_FILE_LOCATION=<ROUTE_DESCRIPTION_FILE_LOCATION>  -DLOGGING_LEVEL=INFO"
 
-[
-    {
-        "id": "bahmni-patient-kid",
-        "destination": {
-        "serviceName": "BAHMNI",
-        "endpoint": "http://localhost:3000/publish"
-        }
-    },
-    {
-        "id": "gcp-patient-registration",
-        "destination": {
-            "serviceName": "GCP",
-            "topic": {
-                "name": "test-topic"
-            }
-        }
-    }
-]
+example:
+mvn spring-boot:run -Dspring-boot.run.jvmArguments="-DGCP_PUB_SUB_ENABLED=true -DGCP_PROJECT_ID=gcp-pubsub-id -DGCP_CREDENTIALS_FILE_LOCATION=/Users/Documents/gcp-pubsub-93eb.json -DBAHMNI_ACTIVEMQ_BROKER_URL=tcp://localhost:61616 -DBAHMNI_ACTIVEMQ_TO_GCP_ROUTE_ENABLED=true -DBAHMNI_ACTIVEMQ_TO_GCP_FAILED_ROUTE_ENABLED=false -DROUTE_DESCRIPTION_FILE_LOCATION=/Users/riteshghiya/Documents/route-descriptions.json -DLOGGING_LEVEL=INFO"
 
+## Sample config file:
 
-sample subscriber-description-configuration.json:
+sample configuration file: [](src/test/resources/route-descriptions.json)
 
-[
-    {
-        "source": {
-            "serviceName": "GCP",
-            "topic": {
-                "subscriptionId": "test-topic-tw-sub",
-                "maxMessages": 20
-            }
-        },
-        "publisherId": "bahmni-patient-kid"
-    },
-    {
-        "source": {
-            "serviceName": "BAHMNI",
-            "endpoint": "/openmrs/ws/atomfeed/patient/recent"
-        },
-        "orderOfSubscription": 1,
-        "publisherId": "gcp-patient-registration"
-    }
-]
-
-sample subscriber-schedule-configuration.json:
-
-[
-    {
-        "serviceName": "BAHMNI",
-        "cron": "30 37 10 * * *"
-    },
-    {
-        "serviceName": "GCP",
-        "cron": "30 40 10 * * *"
-    }
-]
+Explanation:
+- source define the bahmni topic to be consumed.
+- destination defines the gcp topic to be published to based on the eventType. This eventType we expect to receive in header.
+- errorDestination defines the one of the queue in JMS to be published to in case of error.
+- maxRetryDelivery defines the number of times the message should be retried to be published to gcp topic in case of error.
+- retryDelay defines the delay between each retry.
+- cronExpressionForRetryStart defines the cron expression to start the scheduler to process the failed events.
+- cronExpressionForRetryStop defines the cron expression to stop the scheduler to process the failed events.
+- additionalProperties defines the additional properties to be added to the message/payload.
+- filterOnProperties defines the properties to be filtered out from the message/payload.

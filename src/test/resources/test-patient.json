@@ -1,0 +1,468 @@
+{
+  "uuid": "26f224bf-6f3f-484e-bd99-73f598bd1ad7",
+  "display": "BAH203006 - Ankit Sharma",
+  "identifiers": [
+    {
+      "display": "Patient Identifier = BAH203006",
+      "uuid": "4d67af78-9df8-4366-bb86-bb33b7f96040",
+      "identifier": "BAH203006",
+      "identifierType": {
+        "uuid": "81433852-3f10-11e4-adec-0800271c1b75",
+        "display": "Patient Identifier",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://localhost/openmrs/ws/rest/v1/patientidentifiertype/81433852-3f10-11e4-adec-0800271c1b75"
+          }
+        ]
+      },
+      "location": null,
+      "preferred": true,
+      "voided": false,
+      "links": [
+        {
+          "rel": "self",
+          "uri": "http://localhost/openmrs/ws/rest/v1/patient/26f224bf-6f3f-484e-bd99-73f598bd1ad7/identifier/4d67af78-9df8-4366-bb86-bb33b7f96040"
+        },
+        {
+          "rel": "full",
+          "uri": "http://localhost/openmrs/ws/rest/v1/patient/26f224bf-6f3f-484e-bd99-73f598bd1ad7/identifier/4d67af78-9df8-4366-bb86-bb33b7f96040?v=full"
+        }
+      ],
+      "resourceVersion": "1.8"
+    },
+    {
+      "display": "Government ID = ABC123dsf",
+      "uuid": "45d84a52-e3ee-4f4c-9667-5bbfcbc125b5",
+      "identifier": "ABC123dsf",
+      "identifierType": {
+        "uuid": "68aeee02-fba8-11ed-be56-0242ac120002",
+        "display": "Government ID",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://localhost/openmrs/ws/rest/v1/patientidentifiertype/68aeee02-fba8-11ed-be56-0242ac120002"
+          }
+        ]
+      },
+      "location": null,
+      "preferred": false,
+      "voided": false,
+      "links": [
+        {
+          "rel": "self",
+          "uri": "http://localhost/openmrs/ws/rest/v1/patient/26f224bf-6f3f-484e-bd99-73f598bd1ad7/identifier/45d84a52-e3ee-4f4c-9667-5bbfcbc125b5"
+        },
+        {
+          "rel": "full",
+          "uri": "http://localhost/openmrs/ws/rest/v1/patient/26f224bf-6f3f-484e-bd99-73f598bd1ad7/identifier/45d84a52-e3ee-4f4c-9667-5bbfcbc125b5?v=full"
+        }
+      ],
+      "resourceVersion": "1.8"
+    }
+  ],
+  "person": {
+    "uuid": "26f224bf-6f3f-484e-bd99-73f598bd1ad7",
+    "display": "Ankit Sharma",
+    "gender": "M",
+    "age": 25,
+    "birthdate": "1998-06-06T00:00:00.000+0530",
+    "birthdateEstimated": false,
+    "dead": false,
+    "deathDate": null,
+    "causeOfDeath": null,
+    "preferredName": {
+      "display": "Ankit Sharma",
+      "uuid": "8a521465-d00c-499b-9eca-7e8b86c3782c",
+      "givenName": "Ankit",
+      "middleName": null,
+      "familyName": "Sharma",
+      "familyName2": null,
+      "voided": false,
+      "links": [
+        {
+          "rel": "self",
+          "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/name/8a521465-d00c-499b-9eca-7e8b86c3782c"
+        },
+        {
+          "rel": "full",
+          "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/name/8a521465-d00c-499b-9eca-7e8b86c3782c?v=full"
+        }
+      ],
+      "resourceVersion": "1.8"
+    },
+    "preferredAddress": {
+      "display": null,
+      "uuid": "650eb1f9-d0f3-412c-96a2-5fd4249dceff",
+      "preferred": true,
+      "address1": null,
+      "address2": null,
+      "cityVillage": null,
+      "stateProvince": null,
+      "country": "India",
+      "postalCode": null,
+      "countyDistrict": null,
+      "address3": null,
+      "address4": null,
+      "address5": "Chandpolebhhjsdadsdas",
+      "address6": null,
+      "startDate": null,
+      "endDate": null,
+      "latitude": null,
+      "longitude": null,
+      "voided": false,
+      "address7": null,
+      "address8": null,
+      "address9": null,
+      "address10": null,
+      "address11": null,
+      "address12": null,
+      "address13": null,
+      "address14": null,
+      "address15": null,
+      "links": [
+        {
+          "rel": "self",
+          "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/address/650eb1f9-d0f3-412c-96a2-5fd4249dceff"
+        },
+        {
+          "rel": "full",
+          "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/address/650eb1f9-d0f3-412c-96a2-5fd4249dceff?v=full"
+        }
+      ],
+      "resourceVersion": "2.0"
+    },
+    "names": [
+      {
+        "display": "Ankit Sharma",
+        "uuid": "8a521465-d00c-499b-9eca-7e8b86c3782c",
+        "givenName": "Ankit",
+        "middleName": null,
+        "familyName": "Sharma",
+        "familyName2": null,
+        "voided": false,
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/name/8a521465-d00c-499b-9eca-7e8b86c3782c"
+          },
+          {
+            "rel": "full",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/name/8a521465-d00c-499b-9eca-7e8b86c3782c?v=full"
+          }
+        ],
+        "resourceVersion": "1.8"
+      }
+    ],
+    "addresses": [
+      {
+        "display": null,
+        "uuid": "650eb1f9-d0f3-412c-96a2-5fd4249dceff",
+        "preferred": true,
+        "address1": null,
+        "address2": null,
+        "cityVillage": null,
+        "stateProvince": null,
+        "country": "India",
+        "postalCode": null,
+        "countyDistrict": null,
+        "address3": null,
+        "address4": null,
+        "address5": "Chandpolebhhjsdadsdas",
+        "address6": null,
+        "startDate": null,
+        "endDate": null,
+        "latitude": null,
+        "longitude": null,
+        "voided": false,
+        "address7": null,
+        "address8": null,
+        "address9": null,
+        "address10": null,
+        "address11": null,
+        "address12": null,
+        "address13": null,
+        "address14": null,
+        "address15": null,
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/address/650eb1f9-d0f3-412c-96a2-5fd4249dceff"
+          },
+          {
+            "rel": "full",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/address/650eb1f9-d0f3-412c-96a2-5fd4249dceff?v=full"
+          }
+        ],
+        "resourceVersion": "2.0"
+      }
+    ],
+    "attributes": [
+      {
+        "display": "Employer = sddasda",
+        "uuid": "b482d38a-496d-4fa6-8acd-fb7dab87cce5",
+        "value": "sddasda",
+        "attributeType": {
+          "uuid": "c1f825c9-3f10-11e4-adec-0800271c1b75",
+          "display": "Employer",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "http://localhost/openmrs/ws/rest/v1/personattributetype/c1f825c9-3f10-11e4-adec-0800271c1b75"
+            }
+          ]
+        },
+        "voided": false,
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/attribute/b482d38a-496d-4fa6-8acd-fb7dab87cce5"
+          },
+          {
+            "rel": "full",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/attribute/b482d38a-496d-4fa6-8acd-fb7dab87cce5?v=full"
+          }
+        ],
+        "resourceVersion": "1.8"
+      },
+      {
+        "display": "insuranceAccount = asdasd",
+        "uuid": "c04856d7-3447-4144-927a-45d89e00309d",
+        "value": "asdasd",
+        "attributeType": {
+          "uuid": "c1f8880d-3f10-11e4-adec-0800271c1b75",
+          "display": "insuranceAccount",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "http://localhost/openmrs/ws/rest/v1/personattributetype/c1f8880d-3f10-11e4-adec-0800271c1b75"
+            }
+          ]
+        },
+        "voided": false,
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/attribute/c04856d7-3447-4144-927a-45d89e00309d"
+          },
+          {
+            "rel": "full",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/attribute/c04856d7-3447-4144-927a-45d89e00309d?v=full"
+          }
+        ],
+        "resourceVersion": "1.8"
+      },
+      {
+        "display": "language = English",
+        "uuid": "bb3534f9-b631-4dd7-9ef5-884a2728fb5e",
+        "value": "English",
+        "attributeType": {
+          "uuid": "af7db87c-82d0-44d4-973a-906c2ce395cf",
+          "display": "language",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "http://localhost/openmrs/ws/rest/v1/personattributetype/af7db87c-82d0-44d4-973a-906c2ce395cf"
+            }
+          ]
+        },
+        "voided": false,
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/attribute/bb3534f9-b631-4dd7-9ef5-884a2728fb5e"
+          },
+          {
+            "rel": "full",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/attribute/bb3534f9-b631-4dd7-9ef5-884a2728fb5e?v=full"
+          }
+        ],
+        "resourceVersion": "1.8"
+      },
+      {
+        "display": "residencePhone = 34453334324",
+        "uuid": "e76b439b-10b5-45c6-a9a8-53c3592da54d",
+        "value": "34453334324",
+        "attributeType": {
+          "uuid": "88b2f4fb-65cc-44e5-9c05-e82e8487f65c",
+          "display": "residencePhone",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "http://localhost/openmrs/ws/rest/v1/personattributetype/88b2f4fb-65cc-44e5-9c05-e82e8487f65c"
+            }
+          ]
+        },
+        "voided": false,
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/attribute/e76b439b-10b5-45c6-a9a8-53c3592da54d"
+          },
+          {
+            "rel": "full",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/attribute/e76b439b-10b5-45c6-a9a8-53c3592da54d?v=full"
+          }
+        ],
+        "resourceVersion": "1.8"
+      },
+      {
+        "display": "registrationLocation = 54",
+        "uuid": "0243dcfb-694d-4e64-bcda-3fe9e97c5b98",
+        "value": {
+          "uuid": "0fbbeaf4-f3ea-11ed-a05b-0242ac120007",
+          "display": "Jigjiga Mobile Clinic",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "http://localhost/openmrs/ws/rest/v1/location/0fbbeaf4-f3ea-11ed-a05b-0242ac120007"
+            }
+          ]
+        },
+        "attributeType": {
+          "uuid": "113f9a02-f4ac-11ed-a05b-0242ac120003",
+          "display": "registrationLocation",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "http://localhost/openmrs/ws/rest/v1/personattributetype/113f9a02-f4ac-11ed-a05b-0242ac120003"
+            }
+          ]
+        },
+        "voided": false,
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/attribute/0243dcfb-694d-4e64-bcda-3fe9e97c5b98"
+          },
+          {
+            "rel": "full",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/attribute/0243dcfb-694d-4e64-bcda-3fe9e97c5b98?v=full"
+          }
+        ],
+        "resourceVersion": "1.8"
+      },
+      {
+        "display": "Jigjiga",
+        "uuid": "689ff652-3117-46ff-892b-f38c06ab2eb3",
+        "value": {
+          "uuid": "7e21ce3c-fbce-11ed-be56-0242ac120017",
+          "display": "Jigjiga",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "http://localhost/openmrs/ws/rest/v1/concept/7e21ce3c-fbce-11ed-be56-0242ac120017"
+            }
+          ]
+        },
+        "attributeType": {
+          "uuid": "4020431a-2f8e-48c5-a008-5c1630d9ce0b",
+          "display": "referralNew",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "http://localhost/openmrs/ws/rest/v1/personattributetype/4020431a-2f8e-48c5-a008-5c1630d9ce0b"
+            }
+          ]
+        },
+        "voided": false,
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/attribute/689ff652-3117-46ff-892b-f38c06ab2eb3"
+          },
+          {
+            "rel": "full",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/attribute/689ff652-3117-46ff-892b-f38c06ab2eb3?v=full"
+          }
+        ],
+        "resourceVersion": "1.8"
+      },
+      {
+        "display": "Orthodox",
+        "uuid": "0afbf5b7-26af-46ca-be1b-2d7f4576e203",
+        "value": {
+          "uuid": "7e21ce3c-fbce-11ed-be56-0242ac120026",
+          "display": "Orthodox",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "http://localhost/openmrs/ws/rest/v1/concept/7e21ce3c-fbce-11ed-be56-0242ac120026"
+            }
+          ]
+        },
+        "attributeType": {
+          "uuid": "ac81b0f4-266a-4525-a606-7e053ef61e75",
+          "display": "religionNew",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "http://localhost/openmrs/ws/rest/v1/personattributetype/ac81b0f4-266a-4525-a606-7e053ef61e75"
+            }
+          ]
+        },
+        "voided": false,
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/attribute/0afbf5b7-26af-46ca-be1b-2d7f4576e203"
+          },
+          {
+            "rel": "full",
+            "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7/attribute/0afbf5b7-26af-46ca-be1b-2d7f4576e203?v=full"
+          }
+        ],
+        "resourceVersion": "1.8"
+      }
+    ],
+    "voided": false,
+    "auditInfo": {
+      "creator": {
+        "uuid": "c1c21e11-3f10-11e4-adec-0800271c1b75",
+        "display": "bailly.rurangirwa",
+        "links": [
+          {
+            "rel": "self",
+            "uri": "http://localhost/openmrs/ws/rest/v1/user/c1c21e11-3f10-11e4-adec-0800271c1b75"
+          }
+        ]
+      },
+      "dateCreated": "2023-06-06T17:29:28.000+0530",
+      "changedBy": null,
+      "dateChanged": null
+    },
+    "birthtime": null,
+    "deathdateEstimated": false,
+    "causeOfDeathNonCoded": null,
+    "links": [
+      {
+        "rel": "self",
+        "uri": "http://localhost/openmrs/ws/rest/v1/person/26f224bf-6f3f-484e-bd99-73f598bd1ad7"
+      }
+    ],
+    "resourceVersion": "1.11"
+  },
+  "voided": false,
+  "auditInfo": {
+    "creator": {
+      "uuid": "c1c21e11-3f10-11e4-adec-0800271c1b75",
+      "display": "bailly.rurangirwa",
+      "links": [
+        {
+          "rel": "self",
+          "uri": "http://localhost/openmrs/ws/rest/v1/user/c1c21e11-3f10-11e4-adec-0800271c1b75"
+        }
+      ]
+    },
+    "dateCreated": "2023-06-06T17:29:28.000+0530",
+    "changedBy": null,
+    "dateChanged": null
+  },
+  "links": [
+    {
+      "rel": "self",
+      "uri": "http://localhost/openmrs/ws/rest/v1/patient/26f224bf-6f3f-484e-bd99-73f598bd1ad7"
+    }
+  ],
+  "resourceVersion": "1.8"
+}
